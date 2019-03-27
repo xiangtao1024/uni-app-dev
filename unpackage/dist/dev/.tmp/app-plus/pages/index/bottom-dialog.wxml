@@ -1,0 +1,2 @@
+<import src="./bottom-dialog.vue.wxml" />
+    <template is="721580f3" data="{{ ...$root['0'], $root }}"/>

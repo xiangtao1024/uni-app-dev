@@ -1,0 +1,36 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app-插件开发"
+			}
+		},{
+            "path" : "pages/index/preimg",
+            "style" : {
+				"navigationBarTitleText": "图片预览",
+				"app-plus": {
+					"titleNView" : {
+						"autoBackButton" : true
+					}
+				}
+			}
+        },{
+            "path" : "pages/index/bottom-dialog",
+            "style" : {
+				"navigationBarTitleText": "底部弹框",
+				"app-plus": {
+					"titleNView" : {
+						"autoBackButton" : true
+					}
+				}
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

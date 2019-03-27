@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "底部弹框",
+  "titleNView": {
+    "autoBackButton": true
+  }
+}
