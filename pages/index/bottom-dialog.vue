@@ -1,35 +1,24 @@
 <template>
 	<view>
-		<button @tap="showAndHide()">点击</button>
-		<xiangtao-dialog ref="xiangtaoDialog" @confirm="confirm" @cancel="cancel" showTitle="true" showFooter="true">
-			<view>
-				<button>操作1</button>
-				<button style="margin-top: 10upx">操作1</button>
-				<button style="margin-top: 10upx">操作1</button>
-				<button style="margin-top: 10upx">操作1</button>
-				<picker-view indicator-style="height: 80px" value="[9999, month - 1, day - 1]">
-					<picker-view-column>
-						<view class="item" v-for="(item,index) in 10" :key="index">{{item}}年</view>
-					</picker-view-column>
-					<picker-view-column>
-						<view class="item" v-for="(item,index) in 12" :key="index">{{item}}月</view>
-					</picker-view-column>
-					<picker-view-column>
-						<view class="item" v-for="(item,index) in 30" :key="index">{{item}}日</view>
-					</picker-view-column>
-				</picker-view>
-			</view>
-		</xiangtao-dialog>
+		<!-- <button @tap="showAndHide1()">一般用法</button> -->
+		<button @tap="showAndHide2()">ActionSheet</button>
+		<!-- <xiangtao-dialog ref="xiangtaoDialog1" title="一般用法" @confirm="confirm" @cancel="cancel" showTitle="true" showFooter="true"></xiangtao-dialog> -->
+		
+		<xt-bottom-dialog ref="xiangtaoDialog2" title="ActionSheet" @confirm="confirm" @cancel="cancel" showTitle="false" showFooter="false">
+			<button>操作1</button><button>操作2</button><button>操作3</button>
+			<button>操作4</button><button>操作5</button><button>操作6</button>
+			<button>操作7</button><button>操作8</button><button>操作9</button>
+		</xt-bottom-dialog>
 	</view>
 </template>
 
 <script>
-	import xiangtaoDialog from "@/components/xiangtao-dialog/xiangtao-dialog.vue"
+	import xtBottomDialog from "@/components/xt-dialog/xt-bottom-dialog.vue"
 	export default {
-		components: {xiangtaoDialog},
+		components: {xtBottomDialog},
 		data() {
 			return {
-				show: false
+				
 			};
 		},
 		methods: {
@@ -39,9 +28,11 @@
 			cancel(e){
 				console.log(JSON.stringify(e));
 			},
-			showAndHide(){
-				this.show = !this.show;
-				this.$refs.xiangtaoDialog.showDialog();
+			showAndHide1(){
+				this.$refs.xiangtaoDialog1.showDialog();
+			},
+			showAndHide2(){
+				this.$refs.xiangtaoDialog2.showDialog();
 			}
 		}
 	}

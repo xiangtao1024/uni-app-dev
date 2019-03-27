@@ -1,8 +1,5 @@
 <template>
 	<view class="uni-padding-wrap uni-common-pb">
-		<view class="uni-header-logo">
-			<image src="../../../static/componentIndex.png"></image>
-		</view>
 		<view class="uni-hello-text uni-common-pb">
 			组件开发示例
 		</view>
@@ -23,11 +20,11 @@
 		data() {
 			return {
 				lists: [{
-						name: '视图容器',
-						path: "/pages/index/preimg.vue"
+						name: '底部对话框',
+						path: "/pages/index/bottom-dialog"
 					},{
-						name: '视图容器',
-						path: "/pages/index/preimg.vue"
+						name: '图片预览',
+						path: "/pages/index/preimg"
 					}
 				]
 			}

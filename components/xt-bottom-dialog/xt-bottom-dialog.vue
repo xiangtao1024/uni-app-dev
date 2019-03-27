@@ -3,7 +3,7 @@
 		<view class="mask" v-if="maskShow" @tap="maskTap"></view>
 		
 		<view id="xt-dialog-main" class="xt-main" :animation="animationData">
-			<view class="xt-main-header" v-if="showTitle">
+			<view class="xt-main-header" v-if="showTitle == 'true'">
 				<view @tap="cancelTap">
 					<uni-icon type="clear" size="32" color="#4cd964"></uni-icon>
 				</view>
@@ -15,7 +15,7 @@
 			<view class="xt-main-content">
 				<slot />
 			</view>
-			<view class="xt-main-footer" v-if="showFooter">
+			<view class="xt-main-footer" v-if="showFooter == 'true'">
 				<view @tap="cancelTap">
 					<text>取消</text>
 				</view>
